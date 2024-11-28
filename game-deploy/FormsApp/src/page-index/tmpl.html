@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The Dispatcher Game</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="cache-control" content="no-cache"/>
+  <meta http-equiv="pragma" content="no-cache"/>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport"
+        content="width=device-width,user-scalable=0,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+  <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"> -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata"> -->
+<style>
+  body, html {
+    height: 100%;
+    font-family: "Inconsolata", sans-serif;
+  }
+  
+  .bgimg {
+    background-position: center;                                                                                                                                                                                                                                                                                                          
+    background-size: cover;
+    min-height: 75%;
+  }
+  </style>
+
+</head>        
+
+<!-- <%= require('../partials/nav.html?raw') %> -->
+<body>
+
+  <div class="navbar">
+    The Dispatcher Game
+  </div>
+
+  <div id="about">
+
+    <div class="content">
+      <h4 class="header4"> About </h4>
+<p style="font-size: large;"> 
+Dear participant,
+<br>
+<br>
+This survey is being conducted jointly by academic researchers from Max Planck Institute for Software Systems at Saarbrucken, Germany and Indian Institute of Technology at Delhi, India. We aim to build a taxi dispatcher system that tries to assign cabs to customers. Such assignments between a cab and a customer depend on multiple factors e.g., customer's waiting time, cab's waiting time and the distance between the customer and the cab. This survey intends to understand how people perceive which customer should be assigned to a cab keeping in mind the above factors. 
+<br>
+<br>
+During the survey, you will be properly guided about the task in different sections. We will record your responses given during the survey. Your valuable opinion expressed in this survey may contribute to important research findings. So we request you to read the instructions meticulously, and answer all the questions judiciously.
+<br>
+<br>
+Results from the survey may be published in a research forum. However, no personal information will be published except in aggregate forms (such as averages and/or totals). We will neither publish nor share any information which will disclose any of your confidential information of the participants. All information will be protected to the greatest extent allowed by law, and data will be kept secured during and after the survey.
+</p> 
+  </div>
+
+  <div class="content">
+    <h4 class="header4"> Answer the following to proceed</h4>
+    <form style="font-size:large;">  
+      I am 18 years of age or older. YES <input type="checkbox" id="1" name="1" value="1" 
+      onclick="javascript:EnableDisableButton();"/>  
+      <br>
+      I have read this <a href="consent.html">consent form</a> in its entirety or had read to me. 
+      YES <input type="checkbox" id="2" name="2" value="2"
+      onclick="javascript:EnableDisableButton();" />  
+      <br>
+      I voluntarily consent to participate in this research. 
+      YES <input type="checkbox" id="3" name="3" value="3"
+      onclick="javascript:EnableDisableButton();" />  
+      <br>
+    </form>
+  </div>
+  
+  <div class="content" style="display: flex; justify-content: center;">
+    <button class="button" id="start_button" disabled onclick="location.href='game.html'">
+      Start Game
+    </button>
+  </div>
+
+  </div>
+
+  <div class="footer">
+    <p>
+      <a href="https://imprint.mpi-klsb.mpg.de/sws/taxi-dispatcher.mpi-sws.org"  target="_blank">Imprint</a> 
+
+      <a href="https://data-protection.mpi-klsb.mpg.de/sws/taxi-dispatcher.mpi-sws.org"  target="_blank">Data Protection</a> 
+    </p>
+  </div>
+      
+  <!-- intercepted by a resourceQuery in the webpack config -->
+  
+
+  <!-- <%= require('../partials/footer.html?raw') %> -->
+  <script type="text/javascript">
+    var idList = ";"
+    document.getElementById('textbox1').value = idList;
+  
+    function EnableDisableButton() {
+  
+      document.getElementById('start_button').disabled = ! ( document.getElementById(1).checked && document.getElementById(2).checked && document.getElementById(3).checked)
+    }
+  
+  </script>
+</body>
+</html>
