@@ -529,8 +529,8 @@ export default class Game extends Phaser.Scene {
             "It is sadly a dull hour with very few incoming requests :("
         ];
         let inputNumber = this.Maps[this.currentMap].data["Scenario"]
-        this.mapCountText1 = this.add.text(7,40, (this.currentMap + 1) + '/10' ).setFontSize(28).setFontFamily('Trebuchet MS').setColor('#753422').setFontStyle('bold');
-        this.mapCountText1 = this.add.text(7,55,this.Maps[this.currentMap].data["Id"] ).setFontSize(28).setFontFamily('Trebuchet MS').setColor('#753422').setFontStyle('bold');
+        this.mapCountText1 = this.add.text(7,40, (this.currentMap + 1) + '/15' ).setFontSize(28).setFontFamily('Trebuchet MS').setColor('#753422').setFontStyle('bold');
+        //this.mapCountText1 = this.add.text(7,55,this.Maps[this.currentMap].data["Id"] ).setFontSize(28).setFontFamily('Trebuchet MS').setColor('#753422').setFontStyle('bold');
         this.id=this.Maps[this.currentMap].data["Id"];
         if (inputNumber >= 0 && inputNumber < sentences.length) {
             let selectedSentence = sentences[inputNumber];
